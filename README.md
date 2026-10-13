@@ -390,10 +390,10 @@ cd Eventlens
 git status
 git add .
 git commit -m "Add EventLens basic MVP"
-git push -u origin main
+git push -u origin HEAD
 ```
 
-If your work is on a feature branch, push that branch instead: `git push -u origin <your-branch-name>`.
+`HEAD` pushes whichever branch you are on. To open a pull request into `main`, use the GitHub web page or `gh pr create --base main`.
 
 ### macOS / Linux
 
@@ -402,7 +402,7 @@ cd Eventlens
 git status
 git add .
 git commit -m "Add EventLens basic MVP"
-git push -u origin main
+git push -u origin HEAD
 ```
 
 Before committing, check `git status` to confirm that `.env`, `backend/.venv/`, `frontend/node_modules/`, `frontend/dist/`, and `data/*.db` are **not** listed. The `.gitignore` excludes them.
